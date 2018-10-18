@@ -1,6 +1,7 @@
+all: README.md
+
 README.md:
-	echo "# The Unix Workbench - Coursera project - https://www.coursera.org/learn/unix" > README.md
-	echo "" >> README.md
-	echo "Make was run at: $$(date -Iseconds)" >> README.md
-	echo "" >> README.md
-	echo "Lines of code contained in guessinggame.sh: $$(cat guessinggame.sh | wc -l)" >> README.md
+
+	echo '# Guessing Game Bash Script for Unix Workbench\n' > README.md
+	echo '* This Make file was ran at: $(shell date +%Y-%m-%d:%H:%M:%S)\n' >> README.md
+	echo '* There were $(shell wc -l < guessinggame.sh) lines in guessinggame.sh\n' >> README.md
